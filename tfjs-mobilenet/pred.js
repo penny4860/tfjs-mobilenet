@@ -33,10 +33,10 @@ async function predDemo() {
     });
     
     // 4. 익명함수를 실행해서 데이터를 뽑는다.
-    const values = await logits.data();
+    const probs = await logits.data();
 
     // 5. 출력
-    const msg = values.length + ": " + values[0] + ", " + values[1];
+    const msg = probs.length + ": " + probs[0] + ", " + probs[1];
     STATUS_ELEMENT.innerText = msg;
 }
 
