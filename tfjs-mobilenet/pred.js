@@ -1,5 +1,9 @@
 import * as tf from '@tensorflow/tfjs';
 
+// HTML dependency
+const IMG_ELEMENT = document.getElementById('cat');
+const STATUS_ELEMENT = document.getElementById('status');
+
 const MOBILENET_MODEL_PATH =
     'https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json';
 
@@ -12,13 +16,12 @@ async function predDemo() {
     mobilenet.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
     
     // 2. image element
-    const imgElement = document.getElementById('cat');
-    imgElement.style.display = '';
+    IMG_ELEMENT.style.display = '';
 
-    // 3. imgElement -> pred_tensors 를 익명함수로 정의
+    // 3. IMG_ELEMENT -> pred_tensors 를 익명함수로 정의
     const logits = tf.tidy(() => {
         // 1) image tensor
-        let img = tf.browser.fromPixels(imgElement).toFloat();
+        let img = tf.browser.fromPixels(IMG_ELEMENT).toFloat();
 
         // 2) preprocess
         const offset = tf.scalar(127.5);
@@ -33,9 +36,8 @@ async function predDemo() {
     const values = await logits.data();
 
     // 5. 출력
-    const demoStatusElement = document.getElementById('status');
     const msg = values.length + ": " + values[0] + ", " + values[1];
-    demoStatusElement.innerText = msg;
+    STATUS_ELEMENT.innerText = msg;
 }
 
 predDemo();
