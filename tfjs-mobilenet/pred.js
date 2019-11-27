@@ -11,7 +11,7 @@ const IMAGE_SIZE = 224;
 
 let mobilenet;
 async function predDemo() {
-    // 1. load model
+    // 1. load model & warmup
     mobilenet = await tf.loadLayersModel(MOBILENET_MODEL_PATH);
     mobilenet.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
     
