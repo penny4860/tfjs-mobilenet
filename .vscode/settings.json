@@ -1,0 +1,27 @@
+{
+    // "python.pythonPath": "C:\\Users\\jeongjoonsup\\AppData\\Local\\Continuum\\anaconda3\\envs\\color\\python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--enable=F,E,W"
+    ],
+    "python.formatting.provider": "autopep8",
+    "python.linting.pycodestyleEnabled": true,
+    "editor.minimap.enabled": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": false,
+    "editor.formatOnType": false,
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "python.autoComplete.showAdvancedMembers": true,
+    "python.autoComplete.addBrackets": true,
+    "editor.cursorBlinking": "expand",
+    "editor.renderWhitespace": "boundary",
+    "editor.formatOnSaveTimeout": 1500,
+    "python.formatting.blackArgs": [
+        "--skip-string-normalization",
+        "--line-length",
+        "99"
+    ],
+    "python.jediEnabled": false,
+}
