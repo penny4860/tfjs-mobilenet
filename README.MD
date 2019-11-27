@@ -51,9 +51,9 @@
 
 #### tfjs
 
-* mobilenet js 코드 분석
-    * .babelrc / package.json / npm 등으로 frontend 코드 개발환경 구성방식 리뷰
-    * https://github.com/tensorflow/tfjs-examples/tree/master/mobilenet
+* visualize-convnet (cam) 코드 분석
+    * https://github.com/tensorflow/tfjs-examples/tree/master/visualize-convnet
+
 * deploy 실습
     * https://www.youtube.com/watch?v=LnGgndT308Q&t=182s
     * Netlify 사용
