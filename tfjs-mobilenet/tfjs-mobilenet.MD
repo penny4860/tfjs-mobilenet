@@ -15,7 +15,7 @@
         * ```const catElement = document.getElementById('cat');```
         * ```catElement.style.display = '';```
 
-* tensorflow js 로 예측 : ./tfjs_pred.js
+* [tensorflow js 로 예측](./tfjs_pred.js)
     1. load model
         * ```mobilenet = await tf.loadLayersModel(MOBILENET_MODEL_PATH);```
     2. image element 를 준비
@@ -24,7 +24,7 @@
     4. 익명함수를 실행
         * ```const values = await logits.data();```
 
-* 이미지파일을 업로드 : ./img_upload.js
+* [이미지파일을 업로드](img_upload.js)
     1. (html) input 태그를 준비
         * ```Upload an image: <input type="file" id="files" name="files[]" multiple />```
     2. input element를 가져와서 리스너를 등록
